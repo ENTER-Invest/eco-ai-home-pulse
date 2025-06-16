@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -28,6 +27,7 @@ import AgentCard from "@/components/AgentCard";
 import ApplianceGrid from "@/components/ApplianceGrid";
 import EnergyMetrics from "@/components/EnergyMetrics";
 import SustainabilityInsights from "@/components/SustainabilityInsights";
+import BlockchainTab from "@/components/BlockchainTab";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("dashboard");
@@ -157,10 +157,11 @@ const Index = () => {
 
         {/* Main Content */}
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
-          <TabsList className="grid w-full grid-cols-4 dark:bg-gray-800">
+          <TabsList className="grid w-full grid-cols-5 dark:bg-gray-800">
             <TabsTrigger value="dashboard">Dashboard</TabsTrigger>
             <TabsTrigger value="agents">AI Agents</TabsTrigger>
             <TabsTrigger value="appliances">Appliances</TabsTrigger>
+            <TabsTrigger value="blockchain">Blockchain</TabsTrigger>
             <TabsTrigger value="insights">Insights</TabsTrigger>
           </TabsList>
 
@@ -187,6 +188,10 @@ const Index = () => {
 
           <TabsContent value="appliances" className="space-y-6">
             <ApplianceGrid />
+          </TabsContent>
+
+          <TabsContent value="blockchain" className="space-y-6">
+            <BlockchainTab />
           </TabsContent>
 
           <TabsContent value="insights" className="space-y-6">
