@@ -50,18 +50,18 @@ const AgentCard = ({ agent, detailed = false }: AgentCardProps) => {
   };
 
   return (
-    <Card className="hover:shadow-lg transition-shadow duration-200">
+    <Card className="hover:shadow-lg transition-shadow duration-200 dark:bg-gray-800 dark:border-gray-700">
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between">
           <div className="flex items-center gap-3">
             <div className="relative">
-              <div className="p-2 bg-blue-100 rounded-lg">
-                <Bot className="h-6 w-6 text-blue-600" />
+              <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
+                <Bot className="h-6 w-6 text-blue-600 dark:text-blue-400" />
               </div>
               <div className={`absolute -top-1 -right-1 w-3 h-3 rounded-full ${getStatusColor(agent.status)}`} />
             </div>
             <div>
-              <CardTitle className="text-lg">{agent.name}</CardTitle>
+              <CardTitle className="text-lg dark:text-white">{agent.name}</CardTitle>
               <Badge variant={getStatusBadgeVariant(agent.status)} className="text-xs mt-1">
                 {agent.status.charAt(0).toUpperCase() + agent.status.slice(1)}
               </Badge>
@@ -71,13 +71,13 @@ const AgentCard = ({ agent, detailed = false }: AgentCardProps) => {
             <MoreVertical className="h-4 w-4" />
           </Button>
         </div>
-        <CardDescription className="mt-2">{agent.description}</CardDescription>
+        <CardDescription className="mt-2 dark:text-gray-300">{agent.description}</CardDescription>
       </CardHeader>
       
       <CardContent className="space-y-4">
         {/* Managed Appliances */}
         <div>
-          <p className="text-sm font-medium text-gray-700 mb-2">Managing {agent.appliances.length} appliances:</p>
+          <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Managing {agent.appliances.length} appliances:</p>
           <div className="flex flex-wrap gap-1">
             {agent.appliances.map((appliance) => (
               <Badge key={appliance} variant="outline" className="text-xs">
@@ -92,14 +92,14 @@ const AgentCard = ({ agent, detailed = false }: AgentCardProps) => {
           <div className="flex items-center gap-2">
             <TrendingDown className="h-4 w-4 text-green-600" />
             <div>
-              <p className="text-xs text-gray-600">Savings</p>
+              <p className="text-xs text-gray-600 dark:text-gray-400">Savings</p>
               <p className="font-semibold text-green-600">{agent.savings}</p>
             </div>
           </div>
           <div className="flex items-center gap-2">
             <Leaf className="h-4 w-4 text-green-600" />
             <div>
-              <p className="text-xs text-gray-600">CO₂ Reduction</p>
+              <p className="text-xs text-gray-600 dark:text-gray-400">CO₂ Reduction</p>
               <p className="font-semibold text-green-600">{agent.co2Reduction}</p>
             </div>
           </div>
@@ -110,8 +110,8 @@ const AgentCard = ({ agent, detailed = false }: AgentCardProps) => {
             {/* Efficiency Score */}
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
-                <span>Efficiency Score</span>
-                <span className="font-medium">87%</span>
+                <span className="dark:text-gray-300">Efficiency Score</span>
+                <span className="font-medium dark:text-gray-300">87%</span>
               </div>
               <Progress value={87} className="h-2" />
             </div>
@@ -119,8 +119,8 @@ const AgentCard = ({ agent, detailed = false }: AgentCardProps) => {
             {/* Learning Progress */}
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
-                <span>Learning Progress</span>
-                <span className="font-medium">92%</span>
+                <span className="dark:text-gray-300">Learning Progress</span>
+                <span className="font-medium dark:text-gray-300">92%</span>
               </div>
               <Progress value={92} className="h-2" />
             </div>
