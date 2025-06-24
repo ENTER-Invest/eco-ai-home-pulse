@@ -9,6 +9,8 @@
 
 There are several ways of editing your application.
 
+[![Tip in Crypto](https://tip.md/badge.svg)](https://tip.md/nunoedgar-invest)
+
 **Use Lovable**
 
 Simply visit the [Lovable Project](https://lovable.dev/projects/0ec865a8-48ea-4e14-9845-66b58444d908) and start prompting.
@@ -73,6 +75,8 @@ EcoAI Home Pulse includes:
 - **Sustainability Tracking**: Carbon footprint monitoring and eco-friendly achievements
 - **Smart Home Integration**: Appliance control and automation
 - **Decentralized Agents**: Automated energy trading and smart contracts
+
+   [![Tip in Crypto](https://tip.md/badge.svg)](https://tip.md/nunoedgar-invest)
 
 ## How can I deploy this project?
 
